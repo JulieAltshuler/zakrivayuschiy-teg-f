@@ -12,3 +12,115 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes triangle {
+  from {
+    left: -20px;
+  }
+  to {
+    left: -16px;
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.like-icon:focus {
+  outline: none;
+}
+
+.like-icon:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  fill: var(--accent-color);
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  fill: var(--main-background-color);
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: var(--main-background-color);
+  transition: fill 0.3s linear;
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.card__icon-button:hover {
+  .contour {
+    fill: var(--accent-color);
+    transition: fill 0.1s linear;
+  }
+
+  .core {
+    fill: var(--accent-color);
+    transition: fill 0.3s linear;
+  }
+
+  .main-body {
+    fill: var(--accent-color);
+    transition: fill 0.3s linear 0.05s;
+  }
+}
+
+.card__icon-button:active {
+  .core {
+    fill: var(--color-sparks);
+    transition: fill 0.3s linear;
+  }
+
+  .main-body {
+    fill: var(--color-sparks);
+    transition: fill 0.3s linear 0.05s;
+  }
+}
+
+.is-liked {
+  .core {
+    fill: var(--color-sparks);
+    transition: fill 0.3s linear;
+  }
+
+  .main-body {
+    fill: var(--color-sparks);
+    transition: fill 0.3s linear 0.05s;
+  }
+
+  .contour {
+    fill: var(--color-sparks);
+    transition: fill 0.3s linear 0.06s;
+  }
+}
+
+.is-liked .heart {
+  animation: heart 0.3s ease-in 0.1s 1 alternate;
+}
+
+.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s 1 alternate;
+}
