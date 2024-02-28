@@ -28,4 +28,11 @@
     );
   --color-sparks: rgba(255, 0, 0, 1);
   --color-backdrop: rgba(0, 0, 0, 1);
+
+  --header-box-shadow: 0;
+  --card-list-menu-gap: 52px;
+  --button-element-color: rgb(250, 250, 250);
+
+  --laptop-card-description-padding: 28px 0 25px 0;
+  --mobile-card-description-padding: 25px 0 25px 0;
 }
