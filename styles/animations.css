@@ -83,7 +83,7 @@
   }
 }
 
-.like-ico:not(.is-liked):active {
+.like-icon:not(.is-liked):active {
   .core {
     fill: var(--color-sparks);
     transition: fill 0.3s linear;

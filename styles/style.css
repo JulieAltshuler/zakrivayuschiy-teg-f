@@ -140,6 +140,7 @@
   background-color: var(--accent-color);
   transition: transform 0.3s ease;
   transform: scaleX(0);
+  transform-origin: left;
 }
 
 .theme-menu__button:hover {
@@ -265,11 +266,11 @@
 
 .button__card {
   display: flex;
-  gap: 3px;
+  gap: 5px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 25px 25px 0;
+  padding: 0 24px 25px 0;
   appearance: none;
 }
 
@@ -335,20 +336,19 @@
   margin: 0;
   cursor: pointer;
   appearance: none;
-  border: 0;
-  outline: 0;
   transition: color 0.3s ease;
-  max-block-size: 38px;
+  display: block;
+  max-block-size: 34px;
+  position: relative;
+  border: 0;
 }
 
 .card__icon-button:focus {
-  border: 0;
-  outline: 0;
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
-  border: 0;
-  outline: 0;
+  outline: 2px solid var(--accent-color);
 }
 
 .button__text {
